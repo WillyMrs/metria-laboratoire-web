@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#30204f">
-<title>MÉTRIA — Laboratoire V15</title>
+<title>MÉTRIA — Laboratoire V16</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
@@ -15,27 +15,26 @@ header{background:var(--purple);color:#fff;padding:20px max(18px,calc((100vw - 1
 main{max-width:1100px;margin:auto;padding:22px 18px 48px}.intro{margin:0 0 18px}.intro h1{font-size:24px;margin:0 0 4px}.intro p{color:var(--muted);margin:0}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.tab,button{border:0;border-radius:10px;padding:11px 15px;font-weight:650;cursor:pointer}.tab{background:var(--card);color:var(--ink)}.tab.active,button.primary{background:var(--accent);color:#fff}button.secondary{background:#ece9f2;color:var(--purple)}button.danger{background:#f9eaea;color:#9a3535}button:disabled{opacity:.45;cursor:not-allowed}
 .layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.8fr);gap:16px}.panel{border:1px solid var(--line);border-radius:16px;padding:17px;background:#fff;margin-bottom:15px}.panel h2{font-size:17px;margin:0 0 13px}.muted{color:var(--muted);font-size:13px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.field{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}.field label{font-size:13px;color:#5e5b69;font-weight:600}input,select{width:100%;min-width:0;padding:10px 11px;border:1px solid #dcd9e3;border-radius:9px;font:inherit;background:#fff;color:var(--ink)}input:focus,select:focus{outline:2px solid #d8c9f3;border-color:var(--accent)}
-.wallrow{display:grid;grid-template-columns:34px minmax(0,1fr) 36px;gap:8px;align-items:end;padding:10px 0;border-bottom:1px solid var(--line)}.openingrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;align-items:end;padding:10px 0;border-bottom:1px solid var(--line)}.wallrow:last-child,.openingrow:last-child{border-bottom:0}.wallfields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.wallnum{font-weight:750;color:var(--accent);padding:10px 0}.smallbtn{padding:9px 10px}
-canvas{width:100%;height:280px;border:1px dashed #c9c4d2;border-radius:12px;touch-action: none;background:linear-gradient(#fff,#fbfaff)}
+.wallrow{display:grid;grid-template-columns:34px minmax(0,1fr) 36px;gap:8px;align-items:end;padding:10px 0;border-bottom:1px solid var(--line)}.openingrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;align-items:end;padding:10px 0;border-bottom:1px solid var(--line)}.wallrow:last-child,.openingrow:last-child{border-bottom:0}.wallfields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.wallnum{font-weight:750;color:var(--accent);padding:10px 0}.smallbtn{padding:9px 10px}.roombar{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:end;margin-bottom:12px}.planbox{border:1px solid var(--line);border-radius:12px;background:linear-gradient(#fff,#fbfaff);overflow:hidden}.planbox svg{display:block;width:100%;height:auto;min-height:240px;touch-action:pan-x pan-y}.planwall{stroke:var(--accent);stroke-width:3;fill:none}.planstart{fill:#30204f}.planlabel{font:700 13px sans-serif;fill:#30204f;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}.plan-end{stroke:#b7a5da;stroke-width:1;stroke-dasharray:5 5}
 .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.footer{font-size:12px;color:var(--muted);text-align:center;margin-top:24px}
-@media(max-width:760px){.layout{grid-template-columns:1fr}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding:18px 13px 36px}.panel{padding:14px}header{padding:16px;flex-wrap:wrap}.wallrow{grid-template-columns:24px minmax(0,1fr) 30px!important;gap:4px}.wallfields{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.wallfields input{padding:9px 5px;font-size:14px;min-width:0}.openingrow{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}.openingrow .field{min-width:0}.openingrow input,.openingrow select{min-width:0;padding:9px 6px;font-size:14px}.tabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.tab{white-space:nowrap}.actions button{min-height:44px}button,.tab{touch-action:manipulation}}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding:18px 13px 36px}.panel{padding:14px}header{padding:16px;flex-wrap:wrap}.wallrow{grid-template-columns:24px minmax(0,1fr) 30px!important;gap:4px}.wallfields{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.wallfields input{padding:9px 5px;font-size:14px;min-width:0}.openingrow{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}.openingrow .field{min-width:0}.openingrow input,.openingrow select{min-width:0;padding:9px 6px;font-size:14px}.tabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.tab{white-space:nowrap}.actions button{min-height:44px}button,.tab{touch-action:manipulation}.roombar{grid-template-columns:1fr 1fr}.roombar label{grid-column:1/-1}}
 @media(max-width:380px){main{padding-left:10px;padding-right:10px}.panel{padding:11px}.grid2{grid-template-columns:1fr}.wallrow{grid-template-columns:20px minmax(0,1fr) 28px!important}.wallfields{grid-template-columns:1fr 1fr}.wallfields input{font-size:13px;padding:8px 3px}.openingrow{grid-template-columns:1fr 1fr!important}.brand{font-size:20px}.sub{font-size:11px}}
 </style>
 </head>
 <body>
-<header><div><div class="brand">MÉTRIA</div><div class="sub">LABORATOIRE WEB · VERSION 0.5</div></div><span class="status">Prototype de test</span></header>
+<header><div><div class="brand">MÉTRIA</div><div class="sub">LABORATOIRE WEB · VERSION 0.6</div></div><span class="status">Prototype de test</span></header>
 <main>
-<section class="intro"><h1>Mesurer une pièce</h1><p>La saisie des dimensions et le calcul automatique sont prioritaires. Les dessins restent facultatifs.</p></section>
-<div class="notice success">Mode principal : saisis les longueurs, hauteurs et ouvertures. Les surfaces se calculent automatiquement. Les dessins 2D sont des aides facultatives ; le LiDAR est volontairement reporté.</div>
+<section class="intro"><h1>Mesurer un logement</h1><p>Ajoute ses pièces, renseigne les murs et observe le plan coté se mettre à jour automatiquement.</p></section>
+<div class="notice success">Les calculs et le plan restent indicatifs : vérifie les mesures sur place avant tout achat ou travaux.</div>
 <div class="tabs">
 <button class="tab active" data-tab="walls">Saisie des mesures</button>
-<button class="tab" data-tab="draw">Plan 2D (facultatif)</button>
-<button class="tab" data-tab="elevation">Dessin mural (facultatif)</button>
+<button class="tab" data-tab="plan">Plan 2D automatique</button>
 </div>
 <div class="layout">
 <div>
 <section class="panel" id="wallPanel">
-<h2>Informations de la pièce</h2>
+<h2 id="activeRoomHeading">Informations de la pièce</h2>
+<div class="roombar"><label>Pièce active<select id="roomSelect" aria-label="Pièce active"></select></label><button class="secondary" id="addRoom">+ Ajouter une pièce</button><button class="danger" id="deleteRoom">Supprimer la pièce</button></div>
 <div class="grid2">
 <div class="field"><label for="roomName">Nom de la pièce</label><input id="roomName" placeholder="Ex. Séjour"></div>
 <div class="field"><label for="defaultHeight">Hauteur habituelle (m)</label><input id="defaultHeight" type="number" min="0" step=".01" value="2.50"></div>
@@ -46,41 +45,14 @@ canvas{width:100%;height:280px;border:1px dashed #c9c4d2;border-radius:12px;touc
 <div class="actions"><button class="secondary" id="addWall">+ Ajouter un mur</button></div>
 <div id="closure" class="notice">La fermeture du contour sera vérifiée à partir des longueurs et des angles.</div>
 </section>
-<section class="panel hidden" id="drawPanel">
-<h2>Dessin du contour</h2>
-<p class="muted">Touche ou clique pour placer les sommets dans l'ordre. Ferme le contour en appuyant sur « Terminer ». Le dessin donne une forme et des longueurs indicatives : les mesures réelles restent à saisir pour un résultat fiable.</p>
-<canvas id="canvas" width="900" height="420"></canvas>
-<div class="actions"><button class="secondary" id="undoPoint">Annuler le dernier point</button><button class="primary" id="finishDraw">Terminer le contour</button><button class="secondary" id="clearDraw">Effacer</button></div>
-<div id="drawInfo" class="muted">Aucun contour dessiné.</div>
-</section>
-<section class="panel hidden" id="elevationPanel">
-<h2>Outil graphique facultatif</h2>
-<p class="muted">Choisis un mur, puis déplace ses sommets directement sur le dessin. Ajoute des sommets pour créer un rampant ou un décrochement. Les ouvertures peuvent être ajoutées, déplacées et redimensionnées.</p>
-<div class="grid2">
- <div class="field"><label for="elevationWall">Mur à éditer</label><select id="elevationWall"></select></div>
- <div class="field"><label for="elevationName">Nom du mur</label><input id="elevationName" placeholder="Mur 1"></div>
-</div>
-<svg id="elevationSvg" viewBox="0 0 900 430" role="img" aria-label="Élévation murale éditable" style="width:100%;height:auto;min-height:220px;border:1px dashed #c9c4d2;border-radius:12px;background:#fcfbff;touch-action:none"></svg>
-<div class="actions">
- <button class="secondary" id="addVertex">+ Ajouter un sommet</button>
- <button class="primary" id="addElevationOpening">+ Ajouter une ouverture</button>
- <button class="danger" id="deleteElevationOpening">Supprimer l’ouverture sélectionnée</button>
-</div>
-<div id="elevationOpeningFields" class="panel hidden" style="margin-top:12px;background:#f8f7fa">
- <h3 style="font-size:15px;margin:0 0 10px">Ouverture sélectionnée</h3>
- <div class="grid2">
-  <div class="field"><label>Position horizontale X (m)</label><input id="eoX" type="number" step=".01"></div>
-  <div class="field"><label>Hauteur Y (m)</label><input id="eoY" type="number" step=".01"></div>
-  <div class="field"><label>Largeur (m)</label><input id="eoW" type="number" min=".05" step=".01"></div>
-  <div class="field"><label>Hauteur (m)</label><input id="eoH" type="number" min=".05" step=".01"></div>
- </div>
- <button class="secondary" id="applyOpeningGeometry">Appliquer les dimensions</button>
-</div>
-<div id="elevationMetrics" class="notice">Sélectionne un mur pour afficher son élévation.</div>
-<p class="muted">Sur iPhone, fais glisser les poignées rondes du contour. Les données restent enregistrées uniquement dans le navigateur de cet appareil.</p>
+<section class="panel hidden" id="planPanel">
+<h2>Plan coté de la pièce</h2>
+<p class="muted">Le plan se met à jour depuis les longueurs et rotations saisies. Il sert à visualiser la forme ; il ne remplace pas un relevé sur place.</p>
+<div class="planbox"><svg id="floorPlan" viewBox="0 0 800 460" role="img" aria-label="Plan coté automatique de la pièce"></svg></div>
+<div id="planInfo" class="notice">Ajoute des murs et saisis leurs longueurs pour voir le plan.</div>
 </section>
 <section class="panel">
-<h2>Ouvertures</h2>
+<h2 id="openingsHeading">Ouvertures — Pièce 1</h2>
 <p class="muted">Les ouvertures ne sont déduites que si leurs dimensions sont renseignées et valides.</p>
 <div id="openings"></div>
 <div class="actions"><button class="secondary" id="addOpening">+ Ajouter une ouverture</button></div>
@@ -97,7 +69,7 @@ canvas{width:100%;height:280px;border:1px dashed #c9c4d2;border-radius:12px;touc
 </div>
 <aside>
 <section class="panel">
-<h2>Résultat de la pièce</h2>
+<h2 id="resultHeading">Résultat — Pièce 1</h2>
 <div class="result"><span>Surface nette des murs</span><strong id="netArea">— m²</strong></div>
 <div class="resultline"><span>Surface brute</span><b id="grossArea">— m²</b></div>
 <div class="resultline"><span>Ouvertures déduites</span><b id="deductions">— m²</b></div>
@@ -117,8 +89,8 @@ canvas{width:100%;height:280px;border:1px dashed #c9c4d2;border-radius:12px;touc
 <div class="grid">
 <label>Produit de la bibliothèque<select id="tcProduct"><option value="">Sélectionner un produit…</option></select></label>
 <label>Surface du groupe (m²)<input id="tcArea" type="number" min="0" step="0.01" placeholder="Ex. 42"></label>
-<label>Support du groupe<input id="tcSupport" list="tcSupportOptions" placeholder="Choisis un produit puis un support compatible"><datalist id="tcSupportOptions"></datalist></label>
-<label>Supports compatibles (séparés par ;)<input id="tcCompatible" placeholder="Ex. Plâtre ; plaque de plâtre"></label>
+<label>Support du groupe<select id="tcSupport" disabled><option value="">Choisis d’abord un produit</option></select></label>
+<label>Supports compatibles<input id="tcCompatible" placeholder="Chargés depuis la fiche produit" readonly></label>
 <label>Base de rendement<select id="tcBasis"><option value="coverage">m² par unité</option><option value="rate">unité par m²</option><option value="thickness">kg ou L par m² et par mm</option><option value="unknown">Non renseignée</option></select></label>
 <label>Application<select id="tcApplication"><option value="coat">Par couche</option><option value="system">Système complet</option><option value="thickness">Selon épaisseur</option></select></label>
 <label>Valeur technique<input id="tcYield" type="number" min="0" step="0.001" placeholder="Rendement / consommation"></label>
@@ -144,14 +116,13 @@ canvas{width:100%;height:280px;border:1px dashed #c9c4d2;border-radius:12px;touc
 </section>
 </aside>
 </div>
-<div class="footer">MÉTRIA Web laboratoire V15 · Prototype expérimental · Les résultats doivent être vérifiés avant tout usage professionnel.</div>
+<div class="footer">MÉTRIA Web laboratoire V16 · Prototype expérimental · Les résultats doivent être vérifiés avant tout usage professionnel.</div>
 </main>
 <script>
 const $=id=>document.getElementById(id);
-let walls=[{length:4.2,startHeight:2.5,endHeight:2.5,turn:90},{length:3.6,startHeight:2.5,endHeight:2.5,turn:90},{length:4.2,startHeight:2.5,endHeight:2.5,turn:90},{length:3.6,startHeight:2.5,endHeight:2.5,turn:90}];
-let openings=[{wall:1,type:"Porte",width:0.83,height:2.04,offset:1.0,sill:0},{wall:2,type:"Fenêtre",width:1.2,height:1.15,offset:1.0,sill:0.9}];
-let points=[],drawnWalls=null,activeTab="walls";
-let elevationShapes={}, selectedElevationWall=0, selectedElevationOpening=null, dragVertex=null;
+let rooms=[{id:1,name:"Pièce 1",defaultHeight:"2.5",walls:[{length:4.2,startHeight:2.5,endHeight:2.5,turn:90},{length:3.6,startHeight:2.5,endHeight:2.5,turn:90},{length:4.2,startHeight:2.5,endHeight:2.5,turn:90},{length:3.6,startHeight:2.5,endHeight:2.5,turn:90}],openings:[{wall:1,type:"Porte",width:0.83,height:2.04,offset:1.0,sill:0},{wall:2,type:"Fenêtre",width:1.2,height:1.15,offset:1.0,sill:0.9}]}];
+let activeRoom=0,walls=rooms[0].walls,openings=rooms[0].openings;
+let activeTab="walls";
 const fmt=n=>Number.isFinite(n)?n.toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2}):"—";
 function renderWalls(){
  $("walls").replaceChildren();
@@ -166,18 +137,9 @@ function readNumber(v){if(v===""||v===null||v===undefined)return null;let n=Numb
 function safeStoredState(raw){
  if(!raw||typeof raw!=="object"||Array.isArray(raw))throw new Error("Format de sauvegarde invalide.");
  const arr=(v,max)=>{if(!Array.isArray(v)||v.length>max)throw new Error("Données trop volumineuses ou invalides.");return v};
- const num=(v,nullable=true)=>{if(v===null||v===undefined||v==="")return nullable?null:0;const n=Number(v);if(!Number.isFinite(n)||Math.abs(n)>1000000)throw new Error("Une valeur numérique est invalide.");return n};
- const polygon=(v,min=0)=>{const out=arr(v??[],500).map(p=>{if(!p||typeof p!=="object")throw new Error("Polygone de sauvegarde invalide.");return{x:num(p.x,false),y:num(p.y,false)}});if(min>0&&out.length<min)throw new Error("Un contour doit contenir au moins trois sommets.");return out};
- const shapes={};
- if(raw.elevationShapes&&typeof raw.elevationShapes==="object"&&!Array.isArray(raw.elevationShapes)){
-  Object.entries(raw.elevationShapes).slice(0,100).forEach(([key,v])=>{if(!/^\d+$/.test(key)||!v||typeof v!=="object")return;shapes[key]={name:String(v.name??"").slice(0,80),outline:polygon(v.outline,3),openings:arr(v.openings??[],100).map(o=>({outline:polygon(o?.outline,3)}))}});
- }
- const points=arr(raw.points??[],500).map(p=>({x:num(p.x,false),y:num(p.y,false)}));
- const drawnWalls=raw.drawnWalls==null?null:arr(raw.drawnWalls,500).map(v=>num(v,false));
- if(drawnWalls&&drawnWalls.length!==points.length)throw new Error("Contour de plan incohérent.");
- return {...raw,walls:arr(raw.walls??[],100).map(w=>({length:num(w.length),startHeight:num(w.startHeight??w.height),endHeight:num(w.endHeight??w.height),turn:num(w.turn)})),openings:arr(raw.openings??[],300).map(o=>({wall:num(o.wall,false),type:["Porte","Fenêtre","Autre"].includes(o.type)?o.type:"Autre",width:num(o.width),height:num(o.height),offset:num(o.offset),sill:num(o.sill)})),points,drawnWalls,elevationShapes:shapes};
-}
-function rectangleUnionArea(rectangles){
+ const num=(v)=>{if(v===null||v===undefined||v==="")return null;const n=Number(v);if(!Number.isFinite(n)||Math.abs(n)>1000000)throw new Error("Une valeur numérique est invalide.");return n};
+ return {...raw,walls:arr(raw.walls??[],100).map(w=>({length:num(w.length),startHeight:num(w.startHeight??w.height),endHeight:num(w.endHeight??w.height),turn:num(w.turn)})),openings:arr(raw.openings??[],300).map(o=>({wall:num(o.wall),type:["Porte","Fenêtre","Autre"].includes(o.type)?o.type:"Autre",width:num(o.width),height:num(o.height),offset:num(o.offset),sill:num(o.sill)}))};
+}function rectangleUnionArea(rectangles){
  const xs=[...new Set(rectangles.flatMap(r=>[r.x1,r.x2]))].sort((a,b)=>a-b);let area=0;
  for(let i=0;i<xs.length-1;i++){let x1=xs[i],x2=xs[i+1];if(x2<=x1)continue;
   const spans=rectangles.filter(r=>r.x1<x2&&r.x2>x1).map(r=>[r.y1,r.y2]).sort((a,b)=>a[0]-b[0]);
@@ -220,68 +182,43 @@ function calculate(){
  const litres=validEstimate?net*coats/coverage:null;
  $("litres").textContent=litres===null?(fatal?"Corrige les mesures avant le chiffrage.":"Rendement et nombre entier de couches requis.") :fmt(litres)+" L";
  $("materialCost").textContent=price!==null&&price<0?"Prix invalide":litres!==null&&price!==null?fmt(litres*price)+" €":"Non calculable";
- updateClosure();renderElevationWallOptions();
+ updateClosure();renderFloorPlan();
 }
 function closureVector(){if(!walls.length)return null;let x=0,y=0,heading=0;for(let i=0;i<walls.length;i++){let l=readNumber(walls[i].length),t=readNumber(walls[i].turn);if(!(l>0)||t===null)return null;let r=heading*Math.PI/180;x+=l*Math.cos(r);y+=l*Math.sin(r);heading+=t}return {x,y,angle:heading}}
-function updateClosure(){let v=closureVector();if(!v){$("closure").textContent="Fermeture non vérifiable : renseigne les longueurs et les angles.";return}let err=Math.hypot(v.x,v.y);$("closure").textContent=`Écart de fermeture indicatif : ${fmt(err*100)} cm · Somme des rotations : ${fmt(v.angle)}°. Les angles sont des rotations relatives. La fermeture n'est pas imposée automatiquement.`;}
-$("walls").addEventListener("input",e=>{let i=Number(e.target.dataset.i),k=e.target.dataset.k;if(k){walls[i][k]=readNumber(e.target.value);calculate()}});
-$("walls").addEventListener("change",e=>{let i=Number(e.target.dataset.i),k=e.target.dataset.k;if(["length","startHeight","endHeight","turn"].includes(k))calculate()});
-$("walls").addEventListener("click",e=>{let raw=e.target.dataset.remove;if(raw===undefined)return;let i=Number(raw),wallNumber=i+1,attached=openings.filter(o=>o.wall===wallNumber).length;if(attached&&!confirm(`Supprimer le mur ${wallNumber} et ses ${attached} ouverture(s) ?`))return;walls.splice(i,1);openings=openings.filter(o=>o.wall!==wallNumber).map(o=>({...o,wall:o.wall>wallNumber?o.wall-1:o.wall}));let shifted={};Object.entries(elevationShapes).forEach(([key,shape])=>{let n=Number(key);if(n<i)shifted[n]=shape;else if(n>i)shifted[n-1]=shape});elevationShapes=shifted;if(selectedElevationWall>i)selectedElevationWall--;else if(selectedElevationWall===i)selectedElevationWall=Math.min(i,walls.length-1);selectedElevationWall=Math.max(0,selectedElevationWall);selectedElevationOpening=null;renderWalls();renderOpenings();calculate()});
-$("addWall").onclick=()=>{walls.push({length:null,startHeight:readNumber($("defaultHeight").value),endHeight:readNumber($("defaultHeight").value),turn:90});renderWalls();renderOpenings();calculate()};
-$("openings").addEventListener("input",e=>{let i=Number(e.target.dataset.o),k=e.target.dataset.k;if(k){openings[i][k]=k==="type"?e.target.value:k==="wall"?Number(e.target.value):readNumber(e.target.value);calculate()}});
-$("openings").addEventListener("change",e=>{let i=Number(e.target.dataset.o),k=e.target.dataset.k;if(k){openings[i][k]=k==="type"?e.target.value:k==="wall"?Number(e.target.value):readNumber(e.target.value);calculate()}});
-$("openings").addEventListener("click",e=>{let i=e.target.dataset.oremove;if(i!==undefined){openings.splice(Number(i),1);renderOpenings();calculate()}});
-$("addOpening").onclick=()=>{if(!walls.length){$("warnings").className="notice";$("warnings").textContent="Ajoute un mur avant de créer une ouverture.";return}openings.push({wall:1,type:"Autre",width:null,height:null,offset:null,sill:null});renderOpenings();calculate()};
-["defaultHeight","coverage","coats","price"].forEach(id=>$(id).addEventListener("input",()=>{if(id==="defaultHeight"&&walls.length===0)return;calculate()}));
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{activeTab=b.dataset.tab;document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));$("wallPanel").classList.toggle("hidden",activeTab!=="walls");$("drawPanel").classList.toggle("hidden",activeTab!=="draw");$("elevationPanel").classList.toggle("hidden",activeTab!=="elevation");if(activeTab==="elevation")renderElevation()});
-
-function defaultElevation(i){let w=walls[i]||{},len=readNumber(w.length),h0=readNumber(w.startHeight??w.height),h1=readNumber(w.endHeight??w.height);if(!(len>0&&h0>0&&h1>0))return null;return {name:`Mur ${i+1}`,outline:[{x:0,y:0},{x:len,y:0},{x:len,y:h1},{x:0,y:h0}],openings:[]}}
-function getElevation(i){if(!elevationShapes[i])elevationShapes[i]=defaultElevation(i);return elevationShapes[i]}
-function renderElevationWallOptions(){let sel=$("elevationWall");if(!sel)return;let old=selectedElevationWall;sel.innerHTML=walls.map((w,i)=>`<option value="${i}">Mur ${i+1}</option>`).join("");if(!walls.length){sel.innerHTML='<option value="">Aucun mur</option>';return}selectedElevationWall=Math.min(old,walls.length-1);sel.value=selectedElevationWall}
-function bounds(poly){let xs=poly.map(p=>p.x),ys=poly.map(p=>p.y);return {minX:Math.min(...xs),maxX:Math.max(...xs),minY:Math.min(...ys),maxY:Math.max(...ys)}}
-function renderElevation(){if(!walls.length){$("elevationMetrics").textContent="Ajoute d’abord un mur dans l’onglet Mur par mur.";$("elevationSvg").replaceChildren();$("elevationName").value="";$("addVertex").disabled=true;$("addElevationOpening").disabled=true;$("deleteElevationOpening").disabled=true;$("applyOpeningGeometry").disabled=true;return}renderElevationWallOptions();let e=getElevation(selectedElevationWall);if(!e){$("elevationMetrics").textContent="Renseigne la longueur et les deux hauteurs du mur avant le dessin.";$("elevationSvg").replaceChildren();$("addVertex").disabled=true;$("addElevationOpening").disabled=true;$("deleteElevationOpening").disabled=true;$("applyOpeningGeometry").disabled=true;$("elevationOpeningFields").classList.add("hidden");return}$("addVertex").disabled=false;$("addElevationOpening").disabled=false;let b=bounds(e.outline),pad=45,scale=Math.min(800/Math.max(.1,b.maxX-b.minX),340/Math.max(.1,b.maxY-b.minY));let sx=x=>pad+(x-b.minX)*scale,sy=y=>385-(y-b.minY)*scale;let path=e.outline.map((p,i)=>`${i?'L':'M'} ${sx(p.x)} ${sy(p.y)}`).join(' ')+' Z';let svg=`<path d="${path}" fill="#7655b8" fill-opacity=".12" stroke="#7655b8" stroke-width="4"/>`;
- e.openings.forEach((o,i)=>{if(o.outline.length<3)return;let d=o.outline.map((p,j)=>`${j?'L':'M'} ${sx(p.x)} ${sy(p.y)}`).join(' ')+' Z';svg+=`<path d="${d}" fill="${selectedElevationOpening===i?'#f0a340':'#6b9cc8'}" fill-opacity=".35" stroke="${selectedElevationOpening===i?'#b66b13':'#3978aa'}" stroke-width="3" data-opening="${i}"/>`});
- e.outline.forEach((p,i)=>{svg+=`<circle cx="${sx(p.x)}" cy="${sy(p.y)}" r="10" fill="#7655b8" stroke="white" stroke-width="3" data-vertex="${i}"/>`});
- $("elevationSvg").innerHTML=svg;$("elevationName").value=e.name||`Mur ${selectedElevationWall+1}`;const openingArea=rectangleUnionArea(e.openings.filter(o=>o.outline.length>=3).map(o=>{let r=bounds(o.outline);return{x1:r.minX,x2:r.maxX,y1:r.minY,y2:r.maxY}}));$("elevationMetrics").textContent=`Aperçu graphique seulement · Surface du mur : ${fmt(polyArea(e.outline))} m² · Ouvertures : ${fmt(openingArea)} m² · Ce dessin ne modifie pas le calcul principal.`;
- updateOpeningEditor();
+function updateClosure(){let v=closureVector();if(!v){$("closure").textContent="Le plan se complète dès que chaque mur a une longueur et une rotation.";return}let err=Math.hypot(v.x,v.y);$("closure").textContent=`Écart de fermeture indicatif : ${fmt(err*100)} cm · Somme des rotations : ${fmt(v.angle)}°. Les angles sont des rotations relatives.`;}
+function renderFloorPlan(){
+ const svg=$("floorPlan"),info=$("planInfo"),segments=[],issues=[];let x=0,y=0,heading=0,points=[{x,y}];
+ walls.forEach((wall,i)=>{const length=readNumber(wall.length),turn=readNumber(wall.turn);if(!(length>0)){issues.push(`Mur ${i+1} : longueur à saisir`);return}if(turn===null)issues.push(`Mur ${i+1} : rotation manquante`);const a={x,y},r=heading*Math.PI/180;x+=length*Math.cos(r);y+=length*Math.sin(r);const b={x,y};segments.push({i,length,a,b});points.push(b);if(turn!==null)heading+=turn});
+ if(!segments.length){svg.innerHTML='<text x="400" y="225" text-anchor="middle" class="planlabel">Saisis la longueur du premier mur pour commencer le plan</text>';info.textContent=issues.join(" · ")||"Ajoute un mur et saisis sa longueur.";return}
+ const xs=points.map(p=>p.x),ys=points.map(p=>p.y),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),spanX=Math.max(.1,maxX-minX),spanY=Math.max(.1,maxY-minY),pad=82,scale=Math.min((800-pad*2)/spanX,(460-pad*2)/spanY),offsetX=(800-spanX*scale)/2,offsetY=(460-spanY*scale)/2,sx=v=>offsetX+(v-minX)*scale,sy=v=>460-offsetY-(v-minY)*scale;
+ let markup="";
+ segments.forEach(({i,length,a,b})=>{const ax=sx(a.x),ay=sy(a.y),bx=sx(b.x),by=sy(b.y),dx=bx-ax,dy=by-ay,n=Math.hypot(dx,dy)||1,nx=-dy/n,ny=dx/n,mx=(ax+bx)/2+nx*20,my=(ay+by)/2+ny*20;markup+=`<line class="planwall" x1="${ax}" y1="${ay}" x2="${bx}" y2="${by}"/><text class="planlabel" x="${mx}" y="${my}" text-anchor="middle">Mur ${i+1} · ${fmt(length)} m</text><circle class="planstart" cx="${ax}" cy="${ay}" r="4"/>`});
+ const last=segments[segments.length-1].b,first=segments[0].a,closure=Math.hypot(last.x-first.x,last.y-first.y);if(closure>.03)markup+=`<line class="plan-end" x1="${sx(last.x)}" y1="${sy(last.y)}" x2="${sx(first.x)}" y2="${sy(first.y)}"/>`;
+ svg.innerHTML=markup;const vector=closureVector(),closureText=vector?`Fermeture : ${fmt(Math.hypot(vector.x,vector.y))} m d’écart.`:"Plan partiel : complète les rotations et longueurs manquantes.";info.textContent=[`${segments.length} mur(s) coté(s).`,closureText,...issues].join(" ");
 }
-function polyArea(poly){let a=0;for(let i=0;i<poly.length;i++){let p=poly[i],q=poly[(i+1)%poly.length];a+=p.x*q.y-q.x*p.y}return Math.abs(a)/2}
-function pointInPolygon(p,poly){
- let inside=false;
- for(let i=0,j=poly.length-1;i<poly.length;j=i++){
-  const a=poly[j],b=poly[i],cross=(p.x-a.x)*(b.y-a.y)-(p.y-a.y)*(b.x-a.x);
-  if(Math.abs(cross)<1e-9&&p.x>=Math.min(a.x,b.x)-1e-9&&p.x<=Math.max(a.x,b.x)+1e-9&&p.y>=Math.min(a.y,b.y)-1e-9&&p.y<=Math.max(a.y,b.y)+1e-9)return true;
-  if((b.y>p.y)!==(a.y>p.y)&&p.x<(a.x-b.x)*(p.y-b.y)/(a.y-b.y)+b.x)inside=!inside;
- }
- return inside;
-}
-function rectangleInsidePolygon(x,y,w,h,poly){return [{x,y},{x:x+w,y},{x:x+w,y:y+h},{x,y:y+h},{x:x+w/2,y:y+h/2}].every(p=>pointInPolygon(p,poly))}
-function updateOpeningEditor(){let e=getElevation(selectedElevationWall);if(!e)return;let o=e.openings[selectedElevationOpening];$("elevationOpeningFields").classList.toggle("hidden",!o);$("deleteElevationOpening").disabled=!o;$("applyOpeningGeometry").disabled=!o;if(!o)return;let b=bounds(o.outline);$("eoX").value=b.minX.toFixed(2);$("eoY").value=b.minY.toFixed(2);$("eoW").value=(b.maxX-b.minX).toFixed(2);$("eoH").value=(b.maxY-b.minY).toFixed(2)}
-function setOpeningRect(o,x,y,w,h){o.outline=[{x,y},{x:x+w,y},{x:x+w,y:y+h},{x,y:y+h}]}
-$("elevationWall").addEventListener("change",e=>{selectedElevationWall=Number(e.target.value);selectedElevationOpening=null;renderElevation()});
-$("elevationName").addEventListener("input",e=>{if(walls.length)getElevation(selectedElevationWall).name=e.target.value});
-$("addVertex").onclick=()=>{let e=getElevation(selectedElevationWall),best=0,dist=-1;for(let i=0;i<e.outline.length;i++){let a=e.outline[i],b=e.outline[(i+1)%e.outline.length],d=Math.hypot(a.x-b.x,a.y-b.y);if(d>dist){dist=d;best=i}}let a=e.outline[best],b=e.outline[(best+1)%e.outline.length];e.outline.splice(best+1,0,{x:(a.x+b.x)/2,y:(a.y+b.y)/2});renderElevation()};
-$("addElevationOpening").onclick=()=>{let e=getElevation(selectedElevationWall);if(!e)return;let b=bounds(e.outline),w=Math.min(.9,(b.maxX-b.minX)*.25),h=Math.min(1.1,(b.maxY-b.minY)*.5),x=b.minX+(b.maxX-b.minX-w)/2,y=b.minY+(b.maxY-b.minY-h)/2;if(!(w>0&&h>0)||!rectangleInsidePolygon(x,y,w,h,e.outline)){$("elevationMetrics").textContent="Impossible de placer une ouverture rectangulaire ici ; ajuste d’abord le contour du mur.";return}let o={name:"Ouverture",outline:[]};setOpeningRect(o,x,y,w,h);e.openings.push(o);selectedElevationOpening=e.openings.length-1;renderElevation()};
-$("deleteElevationOpening").onclick=()=>{if(selectedElevationOpening===null)return;getElevation(selectedElevationWall).openings.splice(selectedElevationOpening,1);selectedElevationOpening=null;renderElevation()};
-$("applyOpeningGeometry").onclick=()=>{let e=getElevation(selectedElevationWall),o=e?.openings[selectedElevationOpening];if(!o)return;let x=readNumber($("eoX").value),y=readNumber($("eoY").value),w=readNumber($("eoW").value),h=readNumber($("eoH").value);if([x,y,w,h].some(v=>v===null)||w<=0||h<=0){alert("Dimensions invalides.");return}if(!rectangleInsidePolygon(x,y,w,h,e.outline)){alert("L’ouverture doit rester entièrement à l’intérieur du contour du mur.");return}setOpeningRect(o,x,y,w,h);renderElevation()};
-$("elevationSvg").addEventListener("pointerdown",e=>{let v=e.target.dataset.vertex;if(v!==undefined){dragVertex=Number(v);$("elevationSvg").setPointerCapture(e.pointerId);return}let o=e.target.dataset.opening;if(o!==undefined){selectedElevationOpening=Number(o);renderElevation()}});
-$("elevationSvg").addEventListener("pointermove",e=>{if(dragVertex===null)return;let el=$("elevationSvg"),pt=new DOMPoint(e.clientX,e.clientY),p=pt.matrixTransform(el.getScreenCTM().inverse());let b=bounds(getElevation(selectedElevationWall).outline),pad=45,scale=Math.min(800/Math.max(.1,b.maxX-b.minX),340/Math.max(.1,b.maxY-b.minY));let x=b.minX+(p.x-pad)/scale,y=b.minY+(385-p.y)/scale;getElevation(selectedElevationWall).outline[dragVertex]={x:Math.max(0,x),y:Math.max(0,y)};renderElevation()});
-$("elevationSvg").addEventListener("pointerup",()=>{dragVertex=null});
-
-const canvas=$("canvas"),ctx=canvas.getContext("2d");
-function drawCanvas(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#7655b8";ctx.strokeStyle="#7655b8";ctx.lineWidth=3;if(points.length){ctx.beginPath();points.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));if(drawnWalls)ctx.closePath();ctx.stroke();points.forEach((p,i)=>{ctx.beginPath();ctx.arc(p.x,p.y,7,0,Math.PI*2);ctx.fill();ctx.fillStyle="#30204f";ctx.font="16px sans-serif";ctx.fillText(String(i+1),p.x+10,p.y-10);ctx.fillStyle="#7655b8"})}}
-function canvasPoint(e){let r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*canvas.width/r.width,y:(e.clientY-r.top)*canvas.height/r.height}}
-canvas.addEventListener("pointerdown",e=>{if(drawnWalls)return;points.push(canvasPoint(e));drawCanvas();$("drawInfo").textContent=`${points.length} sommet(s) placé(s).`});
-$("undoPoint").onclick=()=>{points.pop();drawnWalls=null;drawCanvas();$("drawInfo").textContent=`${points.length} sommet(s) placé(s).`};
-$("clearDraw").onclick=()=>{points=[];drawnWalls=null;drawCanvas();$("drawInfo").textContent="Aucun contour dessiné."};
-$("finishDraw").onclick=()=>{if(points.length<3){$("drawInfo").textContent="Il faut au moins trois sommets.";return}drawnWalls=points.map((p,i)=>{let q=points[(i+1)%points.length];return Math.hypot(q.x-p.x,q.y-p.y)});drawCanvas();let area=0;for(let i=0;i<points.length;i++){let p=points[i],q=points[(i+1)%points.length];area+=p.x*q.y-q.x*p.y}area=Math.abs(area)/2;let per=drawnWalls.reduce((a,b)=>a+b,0);$("drawInfo").textContent=`Contour fermé · ${points.length} côtés · aire dessinée ${fmt(area)} unités² · périmètre ${fmt(per)} unités. Dessin indicatif sans échelle réelle.`};
-function state(){return {roomName:$("roomName").value,defaultHeight:$("defaultHeight").value,walls,openings,elevationShapes,coverage:$("coverage").value,coats:$("coats").value,price:$("price").value,points,drawnWalls}}
-function applyState(input){const s=safeStoredState(input);$("roomName").value=String(s.roomName??"").slice(0,120);$("defaultHeight").value=s.defaultHeight??"2.5";walls=s.walls;openings=s.openings;elevationShapes=s.elevationShapes;$("coverage").value=s.coverage??"";$("coats").value=s.coats??"";$("price").value=s.price??"";points=s.points;drawnWalls=s.drawnWalls;renderWalls();renderOpenings();drawCanvas();calculate()}
-$("save").onclick=()=>{try{localStorage.setItem("metria-lab-v03",JSON.stringify(state()));$("saveMsg").textContent="Essai enregistré sur cet appareil."}catch{$("saveMsg").textContent="Enregistrement impossible : espace local indisponible ou saturé."}};
-$("load").onclick=()=>{let s;try{s=localStorage.getItem("metria-lab-v03");if(!s){$("saveMsg").textContent="Aucune sauvegarde trouvée sur cet appareil.";return}applyState(JSON.parse(s));$("saveMsg").textContent="Données chargées."}catch(e){$("saveMsg").textContent=e?.message||"Sauvegarde illisible."}};
-$("reset").onclick=()=>{if(confirm("Réinitialiser les données de cet essai ?")){walls=[];openings=[];points=[];drawnWalls=null;applyState({walls,openings,points})}};
-renderWalls();renderOpenings();calculate();drawCanvas();renderElevationWallOptions();
-
+function captureRoom(){if(!rooms[activeRoom])return;rooms[activeRoom].name=$("roomName").value.trim()||`Pièce ${activeRoom+1}`;rooms[activeRoom].defaultHeight=$("defaultHeight").value;rooms[activeRoom].walls=walls;rooms[activeRoom].openings=openings}
+function renderRoomSelect(){const sel=$("roomSelect"),old=String(activeRoom);sel.replaceChildren(...rooms.map((room,i)=>{const option=document.createElement("option");option.value=String(i);option.textContent=room.name||`Pièce ${i+1}`;return option}));sel.value=old;$("deleteRoom").disabled=rooms.length<=1}
+function showActiveRoom(){const room=rooms[activeRoom];if(!room)return;walls=room.walls;openings=room.openings;$("roomName").value=room.name;$("defaultHeight").value=room.defaultHeight??"2.5";$("activeRoomHeading").textContent=`Informations de la pièce — ${room.name}`;$("openingsHeading").textContent=`Ouvertures — ${room.name}`;$("resultHeading").textContent=`Résultat — ${room.name}`;renderRoomSelect();renderWalls();renderOpenings();calculate()}
+$("roomName").addEventListener("input",()=>{captureRoom();renderRoomSelect();$("activeRoomHeading").textContent=`Informations de la pièce — ${rooms[activeRoom].name}`});
+$("roomSelect").addEventListener("change",e=>{captureRoom();activeRoom=Math.max(0,Math.min(rooms.length-1,Number(e.target.value)||0));showActiveRoom()});
+$("addRoom").onclick=()=>{captureRoom();const height=readNumber($("defaultHeight").value)||2.5;rooms.push({id:Date.now()+Math.random(),name:`Pièce ${rooms.length+1}`,defaultHeight:String(height),walls:[{length:null,startHeight:height,endHeight:height,turn:90}],openings:[]});activeRoom=rooms.length-1;showActiveRoom()};
+$("deleteRoom").onclick=()=>{if(rooms.length<=1)return;if(!confirm(`Supprimer « ${rooms[activeRoom].name} » et ses murs ?`))return;rooms.splice(activeRoom,1);activeRoom=Math.max(0,activeRoom-1);showActiveRoom()};
+$("walls").addEventListener("input",e=>{const i=Number(e.target.dataset.i),key=e.target.dataset.k;if(key){walls[i][key]=readNumber(e.target.value);captureRoom();calculate()}});
+$("walls").addEventListener("change",e=>{const i=Number(e.target.dataset.i),key=e.target.dataset.k;if(["length","startHeight","endHeight","turn"].includes(key)){walls[i][key]=readNumber(e.target.value);captureRoom();calculate()}});
+$("walls").addEventListener("click",e=>{const raw=e.target.dataset.remove;if(raw===undefined)return;const i=Number(raw),wallNumber=i+1,attached=openings.filter(o=>o.wall===wallNumber).length;if(attached&&!confirm(`Supprimer le mur ${wallNumber} et ses ${attached} ouverture(s) ?`))return;walls.splice(i,1);openings=openings.filter(o=>o.wall!==wallNumber).map(o=>({...o,wall:o.wall>wallNumber?o.wall-1:o.wall}));captureRoom();renderWalls();renderOpenings();calculate()});
+$("addWall").onclick=()=>{const height=readNumber($("defaultHeight").value);walls.push({length:null,startHeight:height,endHeight:height,turn:90});captureRoom();renderWalls();renderOpenings();calculate()};
+$("openings").addEventListener("input",e=>{const i=Number(e.target.dataset.o),key=e.target.dataset.k;if(key){openings[i][key]=key==="type"?e.target.value:key==="wall"?Number(e.target.value):readNumber(e.target.value);captureRoom();calculate()}});
+$("openings").addEventListener("change",e=>{const i=Number(e.target.dataset.o),key=e.target.dataset.k;if(key){openings[i][key]=key==="type"?e.target.value:key==="wall"?Number(e.target.value):readNumber(e.target.value);captureRoom();calculate()}});
+$("openings").addEventListener("click",e=>{const i=e.target.dataset.oremove;if(i!==undefined){openings.splice(Number(i),1);captureRoom();renderOpenings();calculate()}});
+$("addOpening").onclick=()=>{if(!walls.length){$("warnings").className="notice";$("warnings").textContent="Ajoute un mur avant de créer une ouverture.";return}openings.push({wall:1,type:"Autre",width:null,height:null,offset:null,sill:null});captureRoom();renderOpenings();calculate()};
+["defaultHeight","coverage","coats","price"].forEach(id=>$(id).addEventListener("input",()=>{if(id==="defaultHeight")captureRoom();calculate()}));
+document.querySelectorAll(".tab").forEach(button=>button.onclick=()=>{activeTab=button.dataset.tab;document.querySelectorAll(".tab").forEach(item=>item.classList.toggle("active",item===button));$("wallPanel").classList.toggle("hidden",activeTab!=="walls");$("planPanel").classList.toggle("hidden",activeTab!=="plan");if(activeTab==="plan")renderFloorPlan()});
+function state(){captureRoom();return {rooms:rooms.map(room=>({id:room.id,name:room.name,defaultHeight:room.defaultHeight,walls:room.walls,openings:room.openings})),activeRoom,coverage:$("coverage").value,coats:$("coats").value,price:$("price").value}}
+function applyState(input){let list;if(Array.isArray(input?.rooms)){list=input.rooms.map((room,i)=>{if(!room||typeof room!=="object")throw new Error("Pièce enregistrée invalide.");const clean=safeStoredState(room);return{id:room.id??i+1,name:String(room.name??`Pièce ${i+1}`).slice(0,120),defaultHeight:String(room.defaultHeight??"2.5"),walls:clean.walls,openings:clean.openings}})}else{const clean=safeStoredState(input);list=[{id:1,name:String(clean.roomName??"Pièce 1").slice(0,120)||"Pièce 1",defaultHeight:String(clean.defaultHeight??"2.5"),walls:clean.walls,openings:clean.openings}]};if(!list.length)throw new Error("La sauvegarde ne contient aucune pièce.");rooms=list;activeRoom=Math.max(0,Math.min(rooms.length-1,Number(input.activeRoom)||0));$("coverage").value=input.coverage??"";$("coats").value=input.coats??"";$("price").value=input.price??"";showActiveRoom()}
+$("save").onclick=()=>{try{localStorage.setItem("metria-lab-v04",JSON.stringify(state()));$("saveMsg").textContent="Logement enregistré sur cet appareil."}catch{$("saveMsg").textContent="Enregistrement impossible : espace local indisponible ou saturé."}};
+$("load").onclick=()=>{let saved;try{saved=localStorage.getItem("metria-lab-v04")||localStorage.getItem("metria-lab-v03");if(!saved){$("saveMsg").textContent="Aucune sauvegarde trouvée sur cet appareil.";return}applyState(JSON.parse(saved));$("saveMsg").textContent="Données du logement chargées."}catch(e){$("saveMsg").textContent=e?.message||"Sauvegarde illisible."}};
+$("reset").onclick=()=>{if(!confirm("Réinitialiser le logement et supprimer ses pièces de cet essai ?"))return;rooms=[{id:1,name:"Pièce 1",defaultHeight:"2.5",walls:[],openings:[]}];activeRoom=0;$("coverage").value="";$("coats").value="";$("price").value="";showActiveRoom();$("saveMsg").textContent="Logement réinitialisé."};
+renderRoomSelect();renderWalls();renderOpenings();calculate();
 // V14 — calcul matière par groupe, avec contrôle de source et optimisation des formats.
 const tcCatalog=[{"id":"METRIA-PR-SIK-ALPHA-CLASSIC-PRIMER","name":"Alpha Classic Primer","manufacturer":"Sikkens / AkzoNobel","category":"Primaire","supports":["Plâtre","plaque de plâtre","enduit intérieur"],"basis":"coverage","application":"coat","yield":8,"unit":"L","coats":1,"packages":["1 L","5 L","15 L"],"source":"https://www.sikkens.fr/fr/produits/alpha-classic-primer","verified":true},{"id":"METRIA-PR-SIK-ALPHA-PRIM-ISOL","name":"Alpha Prim Isol","manufacturer":"Sikkens / AkzoNobel","category":"Primaire","supports":["Ancienne peinture adhérente","bois","plâtre","plaque de plâtre","béton ancien","faïence","métaux non ferreux"],"basis":"coverage","application":"coat","yield":10,"unit":"L","coats":null,"packages":["1 L","2,5 L","10 L"],"source":"https://www.sikkens.fr/fr/produits/alpha-prim-isol","verified":true},{"id":"METRIA-PR-SIK-ROLLIMPRIM","name":"Rollimprim","manufacturer":"Sikkens / AkzoNobel","category":"Primaire","supports":["Plâtre","enduits maigres","enduits à l'eau","bois et dérivés"],"basis":"coverage","application":"coat","yield":13,"unit":"L","coats":null,"packages":["5 L","15 L"],"source":"https://www.sikkens.fr/fr/produits/rollimprim","verified":true},{"id":"METRIA-PR-MAE-NORWAY","name":"Norway","manufacturer":"Maestria","category":"Primaire","supports":["Plaque de plâtre","béton","enduit minéral","ancienne peinture compatible","bois","verre","faïence","métaux non ferreux préparés"],"basis":"coverage","application":"coat","yield":10,"unit":"L","coats":null,"packages":["0,5 L","2,5 L","15 L"],"source":"https://www.pabion.net/ressources/FICH_TECH/NORWAY.pdf","verified":true},{"id":"METRIA-PR-MAE-IKARPRIM","name":"Ikarprim","manufacturer":"Maestria","category":"Primaire","supports":["Bois et dérivés","plâtre","enduits","anciennes peintures compatibles et adhérentes"],"basis":"coverage","application":"coat","yield":10,"unit":"L","coats":1,"packages":["1 L","2,5 L","10 L"],"source":"https://www.couleursdargence.fr/shop/ikarprim-impression-universelle-bois-murs-interieur-exterieur-glycero-193/document/134","verified":true},{"id":"METRIA-PR-BD-MAPEI-PRIMAIRE-ACCROCHAGE-1KG","name":"Primaire d'accrochage prêt à l'emploi – 1 kg","manufacturer":"Mapei","category":"Primaire","supports":["Chape ciment","dalle béton","chape anhydrite","plâtre","carreaux de plâtre","plaque de plâtre cartonnée"],"basis":"rate","application":"coat","yield":0.2,"unit":"kg","coats":1,"packages":["1 kg","5 kg"],"source":"https://www.bricodepot.fr/images/_CustomProductCatalog/m570055_Fiche_441456_441457_Primaire_accro.pdf","verified":true},{"id":"METRIA-EN-ALLTEK-WW203","name":"WW203","manufacturer":"ALLTEK (ICP)","category":"Enduit","supports":["Béton brut","brique","terre cuite","plâtre","carreau de plâtre","plaque de plâtre"],"basis":"thickness","application":"thickness","yield":1,"unit":"L","coats":null,"packages":["112 L"],"source":"https://icp-alltek.com/fr-fr/boutique/systeme-tyrex/alltek-ww203-tyrex-enduit-airless/","verified":true},{"id":"METRIA-EN-ALLTEK-ALPHA-F","name":"Alpha F","manufacturer":"ALLTEK (ICP)","category":"Enduit","supports":["Carreau de plâtre","plaque de plâtre après reprise des joints","plâtre projeté","béton en finition","bois et dérivés","ancienne peinture adhérente"],"basis":"thickness","application":"thickness","yield":1,"unit":"L","coats":null,"packages":["15 L"],"source":"https://icp-alltek.com/fr-fr/boutique/enduits-airless/alltek-alpha-f/","verified":true},{"id":"METRIA-EN-ALLTEK-ALPHA-JET","name":"Alpha Jet","manufacturer":"ALLTEK (ICP)","category":"Enduit","supports":["Murs et plafonds intérieurs sur supports courants","béton brut"],"basis":"rate","application":"coat","yield":0.9,"unit":"kg","coats":null,"packages":["25 kg"],"source":"https://icp-alltek.com/fr-fr/boutique/enduits-airless/alltek-alpha-jet/","verified":true},{"id":"METRIA-EN-POLYFILLA-F210","name":"Polyfilla Pro F210","manufacturer":"Sikkens / AkzoNobel","category":"Enduit","supports":["Plâtre","carreau de plâtre","plaque de plâtre","bois","brique","pierre","plupart des supports du bâtiment","ancienne peinture"],"basis":"unknown","application":"system","yield":null,"unit":"kg","coats":null,"packages":["1 kg","5 kg"],"source":"https://www.sikkens.fr/fr/produits/enduit-de-rebouchage-int%C3%A9rieur-en-p%C3%A2te-all%C3%A9g%C3%A9e-f210","verified":true},{"id":"METRIA-EN-BEISSIER-PRESTONETT-R","name":"Prestonett R Pâte","manufacturer":"Beissier","category":"Enduit","supports":["Béton","béton cellulaire","ciment","parpaing","brique","plâtre et dérivés","plaque de plâtre cartonnée","ancienne peinture"],"basis":"rate","application":"system","yield":0.5,"unit":"kg","coats":null,"packages":["0,33 kg","1 kg","4 kg"],"source":"https://beissier.fr/produit/prestonett-r-pate-rebouchage/","verified":true},{"id":"METRIA-EN-BEISSIER-PRESTONETT-L","name":"Prestonett L Pâte","manufacturer":"Beissier","category":"Enduit","supports":["Béton","béton cellulaire","ciment","parpaing","brique","plâtre et dérivés","plaque de plâtre cartonnée","ancienne peinture","ancienne gouttelette","toile de verre"],"basis":"rate","application":"system","yield":1,"unit":"kg","coats":null,"packages":["7 kg","15 kg","25 kg"],"source":"https://beissier.fr/produit/prestonett-l-pate/","verified":true},{"id":"METRIA-EN-TOUPRET-GF2","name":"GF2","manufacturer":"Toupret","category":"Enduit","supports":["Plâtre","carreau de plâtre","plaque de plâtre","ancien fond peint","enduits","ciment","béton","béton cellulaire","parpaing","brique","pierre","toile de verre","gouttelette","crépi"],"basis":"thickness","application":"thickness","yield":1.7,"unit":"kg","coats":null,"packages":["25 kg"],"source":"https://toupret.com/fr/enduit-professionnels/produit/enduits-degalisage/gf2-enduit-garnissant-lissant","verified":true},{"id":"METRIA-EN-BAGAR-AIRLISS-G","name":"Airliss G","manufacturer":"BAGAR","category":"Enduit","supports":["Béton","béton cellulaire","ciment","parpaing","brique","plâtre et dérivés","plaque de plâtre cartonnée","ancienne peinture","ancienne gouttelette","toile de verre"],"basis":"rate","application":"system","yield":3,"unit":"kg","coats":null,"packages":["25 kg"],"source":"https://www.beissier.fr/produit/bagar-airliss-g/","verified":true},{"id":"METRIA-EN-TOUPRET-CACHET-BLEU","name":"Cachet Bleu","manufacturer":"Toupret","category":"Enduit","supports":["Plâtre","carreau de plâtre","plaque de plâtre","ancien fond peint","enduits","ciment","béton"],"basis":"rate","application":"system","yield":0.25,"unit":"kg","coats":null,"packages":["1 kg","5 kg","15 kg","25 kg"],"source":"https://toupret.com/fr/enduit-professionnels/produit/enduits-de-lissage/cachet-bleu-gain-de-temps","verified":true},{"id":"METRIA-PR-MAE-AQUASTRIA-PRIMER","name":"Aquastria Primer","manufacturer":"Maestria","category":"Primaire","supports":["Bois et dérivés","enduits au mortier hydraulique","enduits de dégrossissage ou lissage","plaques de plâtre cartonnées","anciennes peintures compatibles"],"basis":"coverage","application":"coat","yield":8,"unit":"L","coats":null,"packages":["5 L","15 L"],"source":"https://questionsdeco.com/system/Attachment/000/001/375/original/d818f221cbcb7016316f8a918c9a9967eb7d71ec54785211ec1d0a9ba7923dcd.pdf","verified":true},{"id":"METRIA-PR-BD-TOLLENS-PLAQUE-PLATRE-5L","name":"Sous-couche plaque de plâtre","manufacturer":"Tollens / Cromology","category":"Primaire","supports":["Plaques de plâtre (usage spécifique à confirmer par fiche technique fabricant)"],"basis":"coverage","application":"coat","yield":11,"unit":"L","coats":null,"packages":["5 L"],"source":"https://www.bricodepot.fr/p/3463975195435/sous-couche-plaque-de-platre-blanc-5-l","verified":false},{"id":"METRIA-PT-SIK-ALPHA-CLASSIC-MAT","name":"Alpha Classic Mat","manufacturer":"Sikkens / AkzoNobel","category":"Peinture","supports":["Murs intérieurs","plafonds intérieurs (compatibilité exacte à confirmer par fiche technique)"],"basis":"coverage","application":"coat","yield":8,"unit":"L","coats":2,"packages":["1 L","5 L","15 L"],"source":"https://www.sikkens.fr/fr/produits/alpha-classic-mat","verified":true},{"id":"METRIA-PT-SIK-ALPHA-UNIVERSAL-MAT","name":"Alpha Universal Mat","manufacturer":"Sikkens / AkzoNobel","category":"Peinture","supports":["Murs","plafonds","boiseries selon prescriptions fabricant à confirmer"],"basis":"coverage","application":"coat","yield":10,"unit":"L","coats":null,"packages":["1 L","5 L","10 L"],"source":"https://www.sikkens.fr/fr/produits/alpha-universal-mat","verified":true},{"id":"METRIA-PT-MAE-AQUASTRIA-MAT","name":"Aquastria Mat","manufacturer":"Maestria","category":"Peinture","supports":["Murs intérieurs en pièces sèches (selon documentation consultée)"],"basis":"coverage","application":"coat","yield":8,"unit":"L","coats":2,"packages":["1 L","2,5 L","5 L","15 L"],"source":"https://www.couleursdargence.fr/shop/aquastria-mat-1l-25l-15l-38/document/8","verified":true},{"id":"METRIA-PT-SIK-ALPHA-REZISTO-ANTI-MARKS-VELOURS","name":"Alpha Rezisto Anti-Marks Velours","manufacturer":"Sikkens / AkzoNobel","category":"Peinture","supports":["Murs intérieurs (selon fiche fabricant)"],"basis":"coverage","application":"coat","yield":10,"unit":"L","coats":null,"packages":["1 L","5 L","10 L"],"source":"https://www.sikkens.fr/fr/produits/alpha-rezisto-anti-marks-velours","verified":true},{"id":"METRIA-PT-BD-EVALUX-MAT-12L","name":"EVALUX Mat — 12 L","manufacturer":"Kingfisher International Products B.V.","category":"Peinture","supports":["Murs et plafonds intérieurs — à confirmer sur fiche technique fabricant"],"basis":"coverage","application":"coat","yield":null,"unit":"L","coats":null,"packages":["12 L"],"source":"https://www.bricodepot.fr/p/5063022839794/peinture-interieure-blanche-mat-murs-12-l","verified":false},{"id":"METRIA-PT-BD-EVALUX-VELOURS-12L","name":"EVALUX Velours — 12 L","manufacturer":"Kingfisher International Products B.V.","category":"Peinture","supports":["Murs et plafonds intérieurs — à confirmer sur fiche technique fabricant"],"basis":"coverage","application":"coat","yield":null,"unit":"L","coats":null,"packages":["12 L"],"source":"https://www.bricodepot.fr/p/5063022839787/peinture-interieure-blanche-velours-murs-et-plafonds-12-l","verified":false}];
 const tcIds=["tcProduct","tcArea","tcSupport","tcCompatible","tcBasis","tcApplication","tcYield","tcUnit","tcCoats","tcThickness","tcPacks","tcPrices","tcPriceSource","tcPricesVerified","tcSource","tcVerified"];
@@ -297,15 +234,19 @@ function tcRenderProductInfo(product){
  if(product.yield===null)target.append(document.createTextNode(" · Rendement absent de la fiche."));
  if(product.coats===null&&product.application==="coat")target.append(document.createTextNode(" · Nombre de couches à saisir."));
 }
+function tcSetSupports(product,selected=""){
+ const control=tcGet("tcSupport"),supports=product?.supports||[];control.replaceChildren();
+ const empty=document.createElement("option");empty.value="";empty.textContent=supports.length?"Choisir un support compatible…":"Choisis d’abord un produit";control.append(empty);
+ supports.forEach(value=>{const option=document.createElement("option");option.value=value;option.textContent=value;control.append(option)});
+ control.disabled=!supports.length;control.value=supports.includes(selected)?selected:"";tcGet("tcCompatible").value=supports.join(" ; ");
+}
 function tcSelectProduct(){
- const select=tcGet("tcProduct"),list=tcGet("tcSupportOptions");
+ const select=tcGet("tcProduct");
  tcCatalog.forEach(product=>{const option=document.createElement("option");option.value=product.id;option.textContent=product.name+" — "+product.manufacturer+" ("+product.category+")";select.append(option)});
  select.addEventListener("change",()=>{
   const product=tcCatalog.find(item=>item.id===select.value);
-  if(!product){tcGet("tcSupport").value="";tcGet("tcCompatible").value="";tcGet("tcBasis").value="coverage";tcGet("tcApplication").value="coat";tcGet("tcYield").value="";tcGet("tcUnit").value="L";tcGet("tcCoats").value="2";tcGet("tcThickness").value="";tcGet("tcPacks").value="";tcGet("tcPrices").value="";tcGet("tcPriceSource").value="";tcGet("tcPricesVerified").checked=false;tcGet("tcSource").value="";tcGet("tcVerified").checked=false;list.replaceChildren();tcRenderProductInfo(null);tcGet("tcResult").textContent="Aucun produit sélectionné. Tu peux saisir les données manuellement.";return}
-  tcGet("tcSupport").value="";
-  tcGet("tcCompatible").value=product.supports.join(" ; ");
-  list.replaceChildren(...product.supports.map(support=>{const option=document.createElement("option");option.value=support;return option}));
+  if(!product){tcSetSupports(null);tcGet("tcBasis").value="coverage";tcGet("tcApplication").value="coat";tcGet("tcYield").value="";tcGet("tcUnit").value="L";tcGet("tcCoats").value="2";tcGet("tcThickness").value="";tcGet("tcPacks").value="";tcGet("tcPrices").value="";tcGet("tcPriceSource").value="";tcGet("tcPricesVerified").checked=false;tcGet("tcSource").value="";tcGet("tcVerified").checked=false;tcRenderProductInfo(null);tcGet("tcResult").textContent="Aucun produit sélectionné.";return}
+  tcSetSupports(product);
   tcGet("tcBasis").value=product.basis;
   tcGet("tcApplication").value=product.application;
   tcGet("tcYield").value=product.yield===null?"":product.yield;
@@ -384,7 +325,7 @@ function tcMarkTechnicalEdited(){if(!tcGet("tcProduct").value)return;tcGet("tcVe
 ["tcPrices","tcPriceSource"].forEach(id=>tcGet(id).addEventListener("input",()=>{tcGet("tcPricesVerified").checked=false;tcCalculate()}));
 tcGet("tcCalculate").onclick=tcCalculate;
 tcGet("tcSave").onclick=()=>{try{let data={};tcIds.forEach(id=>data[id]=tcGet(id).type==="checkbox"?tcGet(id).checked:tcGet(id).value);localStorage.setItem("metria-v14-treatment",JSON.stringify(data));tcGet("tcResult").textContent="Essai enregistré sur cet appareil."}catch{tcGet("tcResult").textContent="Enregistrement impossible : espace local indisponible ou saturé."}};
-tcGet("tcLoad").onclick=()=>{let data=localStorage.getItem("metria-v14-treatment");if(!data){tcGet("tcResult").textContent="Aucun essai enregistré.";return}try{let obj=JSON.parse(data);tcIds.forEach(id=>{if(obj[id]!==undefined){if(tcGet(id).type==="checkbox")tcGet(id).checked=!!obj[id];else tcGet(id).value=obj[id]}});const product=tcCatalog.find(item=>item.id===tcGet("tcProduct").value);const list=tcGet("tcSupportOptions");list.replaceChildren(...(product?.supports||[]).map(support=>{const option=document.createElement("option");option.value=support;return option}));tcRenderProductInfo(product||null);tcGet("tcResult").textContent="Essai chargé."; }catch{tcGet("tcResult").textContent="Données enregistrées illisibles."}};
+tcGet("tcLoad").onclick=()=>{let data=localStorage.getItem("metria-v14-treatment");if(!data){tcGet("tcResult").textContent="Aucun essai enregistré.";return}try{let obj=JSON.parse(data);tcIds.forEach(id=>{if(obj[id]!==undefined){if(tcGet(id).type==="checkbox")tcGet(id).checked=!!obj[id];else tcGet(id).value=obj[id]}});const product=tcCatalog.find(item=>item.id===tcGet("tcProduct").value);tcSetSupports(product||null,obj.tcSupport||"");tcRenderProductInfo(product||null);tcGet("tcResult").textContent="Essai chargé."; }catch{tcGet("tcResult").textContent="Données enregistrées illisibles."}};
 
 </script>
 </body></html>
