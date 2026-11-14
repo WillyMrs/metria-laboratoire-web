@@ -1,3 +1,4 @@
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
 <!doctype html>
 <html lang="fr">
 <head>
@@ -313,8 +314,7 @@ function tcSelectProduct(){
   tcGet("tcCoats").value=product.coats===null?"":product.coats;
   tcGet("tcThickness").value="";
   tcGet("tcPrices").value="";tcGet("tcPriceSource").value="";tcGet("tcPricesVerified").checked=false;
-  tcGet("tcPacks").value=product.packages
-  tcGet("tcPrices").value="";
+  tcGet("tcPacks").value=product.packages.join(" ; ");
   tcGet("tcSource").value=product.source;
   tcGet("tcVerified").checked=product.verified;
   tcRenderProductInfo(product);
