@@ -353,7 +353,7 @@ function tcCalculate(){
  const result=tcGet("tcResult"),fail=msg=>{result.textContent=msg;return};
  if(!tcGet("tcVerified").checked||!tcGet("tcSource").value.trim())return fail("Calcul non fiable : coche la vérification et indique la source technique.");
  if(area===null||area<=0)return fail("Surface absente ou invalide.");
- if(!support||!compatible.includes(support))return fail("Support non renseigné ou non déclaré compatible.");
+ if(!support||!compatible.some(item=>item.toLocaleLowerCase("fr-FR")===support.toLocaleLowerCase("fr-FR")))return fail("Support non renseigné ou non déclaré compatible.");
  if(!["coverage","rate","thickness","unknown"].includes(basis))return fail("Base de rendement invalide.");
  if(!["coat","system","thickness"].includes(application))return fail("Type d’application invalide.");
  if(basis==="unknown")return fail("Rendement / consommation non renseigné dans la fiche technique.");
@@ -380,9 +380,9 @@ function tcCalculate(){
  else out+=" Ajoute des conditionnements pour calculer les quantités à acheter.";
  result.textContent=out;
 }
-function tcMarkTechnicalEdited(){if(!tcGet("tcProduct").value)return;tcGet("tcVerified").checked=false;const product=tcCatalog.find(item=>item.id===tcGet("tcProduct").value);tcRenderProductInfo(product||null);tcGet("tcProductInfo").append(document.createTextNode(" · Valeurs modifiées : vérifie-les avant de recocher la confirmation."))}
+function tcMarkTechnicalEdited(){if(!tcGet("tcProduct").value)return;tcGet("tcVerified").checked=false;const product=tcCatalog.find(item=>item.id===tcGet("tcProduct").value);tcRenderProductInfo(product||null);tcGet("tcProductInfo").append(document.createTextNode(" · Valeurs modifiées : vérifie-les avant de recocher la confirmation."));tcCalculate()}
 ["tcCompatible","tcBasis","tcApplication","tcYield","tcUnit","tcCoats","tcPacks","tcSource"].forEach(id=>tcGet(id).addEventListener("input",tcMarkTechnicalEdited));
-["tcPrices","tcPriceSource"].forEach(id=>tcGet(id).addEventListener("input",()=>{tcGet("tcPricesVerified").checked=false}));
+["tcPrices","tcPriceSource"].forEach(id=>tcGet(id).addEventListener("input",()=>{tcGet("tcPricesVerified").checked=false;tcCalculate()}));
 tcGet("tcCalculate").onclick=tcCalculate;
 tcGet("tcSave").onclick=()=>{try{let data={};tcIds.forEach(id=>data[id]=tcGet(id).type==="checkbox"?tcGet(id).checked:tcGet(id).value);localStorage.setItem("metria-v14-treatment",JSON.stringify(data));tcGet("tcResult").textContent="Essai enregistré sur cet appareil."}catch{tcGet("tcResult").textContent="Enregistrement impossible : espace local indisponible ou saturé."}};
 tcGet("tcLoad").onclick=()=>{let data=localStorage.getItem("metria-v14-treatment");if(!data){tcGet("tcResult").textContent="Aucun essai enregistré.";return}try{let obj=JSON.parse(data);tcIds.forEach(id=>{if(obj[id]!==undefined){if(tcGet(id).type==="checkbox")tcGet(id).checked=!!obj[id];else tcGet(id).value=obj[id]}});const product=tcCatalog.find(item=>item.id===tcGet("tcProduct").value);const list=tcGet("tcSupportOptions");list.replaceChildren(...(product?.supports||[]).map(support=>{const option=document.createElement("option");option.value=support;return option}));tcRenderProductInfo(product||null);tcGet("tcResult").textContent="Essai chargé."; }catch{tcGet("tcResult").textContent="Données enregistrées illisibles."}};
