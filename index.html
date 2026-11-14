@@ -204,7 +204,7 @@ function renderFloorPlan(){
    if(o.type==="Porte"){const leafEnd={x:p1.x+nx*pxWidth,y:p1.y+ny*pxWidth},sweep=interiorSide>0?1:0;markup+=`<path class="planopening" d="M ${p2.x} ${p2.y} A ${pxWidth} ${pxWidth} 0 0 ${sweep} ${leafEnd.x} ${leafEnd.y}"/><line class="planopening" x1="${p1.x}" y1="${p1.y}" x2="${leafEnd.x}" y2="${leafEnd.y}"/>`}
    else if(o.type==="Fenêtre"){[-4,4].forEach(offset=>markup+=`<line class="planopening-window" x1="${p1.x+nx*offset}" y1="${p1.y+ny*offset}" x2="${p2.x+nx*offset}" y2="${p2.y+ny*offset}"/>`);markup+=`<line class="planopening-window" x1="${p1.x+nx*7}" y1="${p1.y+ny*7}" x2="${p1.x-nx*7}" y2="${p1.y-ny*7}"/><line class="planopening-window" x1="${p2.x+nx*7}" y1="${p2.y+ny*7}" x2="${p2.x-nx*7}" y2="${p2.y-ny*7}"/>`}
    else markup+=`<line class="planopening" x1="${p1.x}" y1="${p1.y}" x2="${p2.x}" y2="${p2.y}" stroke-dasharray="4 3"/>`;
-   markup+=`<text class="planopening-label" x="${(p1.x+p2.x)/2+nx*18}" y="${(p1.y+p2.y)/2+ny*18}" text-anchor="middle">${label} · ${fmt(end-start)} m</text>`;shownOpenings++;cursor=end
+   markup+=`<text class="planopening-label" x="${(p1.x+p2.x)/2+nx*30}" y="${(p1.y+p2.y)/2+ny*30}" text-anchor="middle">${label} · ${fmt(end-start)} m</text>`;shownOpenings++;cursor=end
   });
   if(cursor<length)markup+=`<line class="planwall" x1="${ax+ux*cursor*scale}" y1="${ay+uy*cursor*scale}" x2="${bx}" y2="${by}"/>`;markup+=`<text class="planlabel" x="${mx}" y="${my}" text-anchor="middle">Mur ${i+1} · ${fmt(length)} m</text><circle class="planstart" cx="${ax}" cy="${ay}" r="4"/>`;
  });
